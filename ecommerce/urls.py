@@ -35,6 +35,8 @@ urlpatterns = [
 
     path('api/', include(router.urls)),
 
+    path('api/accounts/', include('accounts.urls')),
+
     # JWT
     path('api/token/', TokenObtainPairView.as_view()),
     path('api/token/refresh/', TokenRefreshView.as_view()),
